@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brian F. Martin Consulting — HR Consultant & Executive Coach</title>
+    <meta
+      name="description"
+      content="HR Consultant & Executive Coach for high-growth startups, building and developing high-performing teams. Fractional HR leadership, GTM talent strategy, performance systems, leadership development, and HR foundations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body id="top">
+    <!-- Header -->
+    <header class="header">
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <span class="brand-mark">BFM</span>
+          <span class="brand-text">
+            <strong>BRIAN F. MARTIN</strong>&nbsp;&nbsp;CONSULTING
+          </span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a class="is-active" href="#top">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#services">My Services</a>
+          <a href="#tiers">Engagement</a>
+          <a href="#contact">Let's Chat</a>
+          <span class="divider" aria-hidden="true"></span>
+          <a
+            class="icon"
+            href="https://www.linkedin.com/in/brianfmartin/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM14.5 9c-2.21 0-3.5 1.79-3.5 3.1V21h4v-6c0-1 .67-2 1.9-2s1.6 1.1 1.6 2.1V21H23V13.5C23 10.5 21 9 18.8 9c-1.3 0-2.6.6-3.3 1.6V9h-1z"
+                fill="#0A66C2"
+              />
+            </svg>
+          </a>
+        </nav>
+
+        <!-- Hamburger is hidden on desktop; shows only on small screens -->
+        <button class="hamburger" id="openMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <button class="drawer-close" id="closeMenu" aria-label="Close menu">
+        ✕
+      </button>
+      <a href="#top" onclick="closeDrawer()">Home</a>
+      <a href="#about" onclick="closeDrawer()">About Me</a>
+      <a href="#services" onclick="closeDrawer()">My Services</a>
+      <a href="#tiers" onclick="closeDrawer()">Engagement</a>
+      <a href="#contact" onclick="closeDrawer()">Let's Chat</a>
+      <div class="drawer-social">
+        <a
+          href="https://www.linkedin.com/in/brianfmartin/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+      </div>
+    </aside>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-photo">
+          <img src="Images/hero-photo.png" alt="Brian F. Martin portrait" />
+        </div>
+
+        <div class="hero-copy">
+          <h2 class="eyebrow">Brian F. Martin Consulting</h2>
+          <p class="sub">
+            HR Consultant &amp; Executive Coach for High-Growth Startups |
+            Building &amp; Developing High-Performing Teams
+          </p>
+
+          <hr class="rule" />
+          <p class="pillars">
+            • <strong>Passionate</strong> • <strong>Driven</strong
+            ><br class="br-md" />
+            • <strong>Practical</strong> • <strong>Efficient</strong>
+          </p>
+          <hr class="rule" />
+
+          <h1>One Solution for All Your<br class="br-md" />TA Needs</h1>
+
+          <div class="cta-row">
+            <a class="btn btn-cta" href="#services">VIEW MY SERVICES</a>
+            <a class="btn btn-cta-outline" href="#contact"
+              >BOOK A 15 MINUTE MEETING</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission section-pad" id="about">
+      <div class="container vm-grid">
+        <div class="card card-accent">
+          <h3>My Vision</h3>
+          <p>
+            To create a world where innovative founders can achieve their
+            vision, powered by resilient, high-performing teams built to scale
+            with confidence.
+          </p>
+        </div>
+        <div class="card card-accent">
+          <h3>My Mission</h3>
+          <p>
+            To bring peace and clarity to the chaos of scaling. I partner with
+            founders of high-growth startups, providing the fractional HR
+            leadership and data-driven people strategies they need to build the
+            foundational strength for sustainable growth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="longcopy section-alt">
+      <div class="container prose">
+        <p>
+          As an HR consultant and executive coach, I bring peace and clarity to
+          the chaos of scaling for founders of high-growth startups. My role is
+          to build your foundational people strategy, freeing you to focus on
+          your vision.
+        </p>
+        <p>
+          My approach is shaped by over a decade of leadership in the Canadian
+          Armed Forces, where I specialized in building resilient teams in
+          complex, high-stakes environments. This practical experience is backed
+          by a Master's in Industrial/Organizational Psychology, an MBA, and
+          advanced certifications in executive coaching and change management.
+        </p>
+        <p>
+          I am a constant learner with a passion for technology and its
+          potential to improve how we work, especially with innovations in AI.
+          Outside of the office, you'll often find me at the gym. I bring that
+          same steady, grounded energy to our partnership so you can build a
+          company that's not only successful, but also a great place to work.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services section-pad">
+      <div class="container">
+        <h2 class="section-title">Core Service Offerings</h2>
+
+        <div class="services-grid">
+          <div class="service">
+            <h3>1) Talent Strategy for Go-to-Market (GTM) Scaling</h3>
+            <ul>
+              <li>
+                <strong>Recruiting Framework Design:</strong> Efficient,
+                scalable processes to attract and hire top talent.
+              </li>
+              <li>
+                <strong>Onboarding &amp; Enablement:</strong> Programs that
+                reduce ramp-up time and integrate culture effectively.
+              </li>
+              <li>
+                <strong>Succession Planning:</strong> Identify and develop
+                future leaders to ensure continuity.
+              </li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>2) Performance &amp; Engagement Systems</h3>
+            <ul>
+              <li>
+                <strong>Performance Management Design:</strong> Practical
+                systems for feedback, goals, and career development.
+              </li>
+              <li>
+                <strong>Leadership &amp; Executive Coaching:</strong> Enhance
+                impact and navigate challenges.
+              </li>
+              <li>
+                <strong>Employee Engagement Analytics:</strong> Data-led
+                initiatives to improve morale and reduce turnover.
+              </li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>3) Leadership Development</h3>
+            <ul>
+              <li>
+                <strong>New Manager Training:</strong> Equip first-time leaders
+                with core people skills.
+              </li>
+              <li>
+                <strong>Custom Leadership Programs:</strong> Tailored
+                development to boost supervisory effectiveness.
+              </li>
+            </ul>
+          </div>
+
+          <div class="service">
+            <h3>4) HR Foundations &amp; Compliance</h3>
+            <ul>
+              <li>
+                <strong>Organizational Design:</strong> Team structures and
+                workforce planning for growth.
+              </li>
+              <li>
+                <strong>Employee Relations Advisory:</strong> Fair process and
+                risk-mitigating counsel.
+              </li>
+              <li>
+                <strong>Change Management:</strong> Certified approach for
+                adoption during major changes.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engagement -->
+    <section id="tiers" class="tiers section-alt">
+      <div class="container">
+        <h2 class="section-title">Engagement Options</h2>
+        <div class="tier-grid">
+          <div class="tier">
+            <span class="tag">Tier 1</span>
+            <h4>Advisory Retainer (≈ 4–8 hrs/month)</h4>
+            <p>
+              On-call support for leadership questions and employee-relations
+              advice.
+            </p>
+          </div>
+          <div class="tier">
+            <span class="tag">Tier 2</span>
+            <h4>Fractional HR Partner (≈ 1 day/week)</h4>
+            <p>
+              Everything in Tier 1 plus hands-on ownership of a key area such as
+              recruiting, performance, or onboarding.
+            </p>
+          </div>
+          <div class="tier">
+            <span class="tag">Tier 3</span>
+            <h4>Fractional HR Director (≈ 2 days/week)</h4>
+            <p>
+              De facto Head of HR, managing strategic and operational people
+              functions end-to-end.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section-pad">
+      <div class="container contact-inner">
+        <div class="contact-head">
+          <h2>Let's connect!</h2>
+          <p>
+            I'd be happy to discuss how I can support your company's HR and TA
+            goals.
+          </p>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="row">
+            <label class="field">
+              <span>First name *</span>
+              <input id="first" name="first" required />
+            </label>
+            <label class="field">
+              <span>Last name *</span>
+              <input id="last" name="last" required />
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Email *</span>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              inputmode="email"
+              required
+            />
+          </label>
+
+          <label class="field">
+            <span>Write a message *</span>
+            <textarea id="message" name="message" required></textarea>
+          </label>
+
+          <button class="btn btn-cta big" type="submit">SUBMIT</button>
+          <span
+            class="form-status"
+            id="formStatus"
+            role="status"
+            aria-live="polite"
+          ></span>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">BFM</span>
+          <div class="footer-txt">
+            <strong>BRIAN F. MARTIN</strong>&nbsp;&nbsp;CONSULTING
+          </div>
+        </div>
+
+        <div class="footer-right">
+          <a href="#" id="openPrivacy">Privacy Policy</a>
+          <a
+            class="icon"
+            href="https://www.linkedin.com/in/brianfmartin/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM14.5 9c-2.21 0-3.5 1.79-3.5 3.1V21h4v-6c0-1 .67-2 1.9-2s1.6 1.1 1.6 2.1V21H23V13.5C23 10.5 21 9 18.8 9c-1.3 0-2.6.6-3.3 1.6V9h-1z"
+                fill="#0A66C2"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Privacy Modal -->
+    <dialog class="privacy" id="privacy">
+      <div class="privacy-head">
+        <h3>Privacy Policy</h3>
+        <button class="dialog-close" id="closePrivacy" aria-label="Close">
+          ✕
+        </button>
+      </div>
+      <div class="privacy-body">
+        <p>
+          This Privacy Policy describes how Brian F. Martin Consulting (“we,”
+          “us,” or “our”) collects, uses, and discloses your information when
+          you visit our website. By using the Site, you agree to the collection
+          and use of information in accordance with this policy.
+        </p>
+        <h4>Information We Collect</h4>
+        <p>
+          We collect information you provide directly to us (contact form: name,
+          email, message). We also automatically collect limited technical data
+          (IP, browser, OS) via cookies and server logs.
+        </p>
+        <h4>How We Use Your Information</h4>
+        <p>
+          We use your information to respond to inquiries, provide consulting
+          services, and maintain/improve the Site. Marketing contact occurs only
+          with explicit consent.
+        </p>
+        <h4>How We Share Your Information</h4>
+        <p>
+          We do not sell your data. We may share with trusted vendors (e.g.,
+          hosting) under confidentiality.
+        </p>
+        <h4>Cookies</h4>
+        <p>
+          We use cookies to enhance experience and collect anonymous traffic
+          data. You can refuse cookies in your browser; some features may not
+          function properly.
+        </p>
+        <h4>Security</h4>
+        <p>
+          We use reasonable security measures, but no method is 100% secure.
+        </p>
+        <h4>Your Rights</h4>
+        <p>
+          You may request access, correction, or deletion of your personal data.
+        </p>
+        <h4>Contact</h4>
+        <p>
+          Email:
+          <a href="mailto:privacy@bfmconsulting.ca">privacy@bfmconsulting.ca</a>
+        </p>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
