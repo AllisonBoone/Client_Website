@@ -555,4 +555,14 @@ dialog.privacy {
   .vm-grid {
     grid-template-columns: 1fr;
   }
+
+  .container {
+    padding-inline: 16px;
+  }
+  .hero-grid {
+    padding: 40px 16px 56px;
+  }
+  .cta-row {
+    justify-content: left;
+  }
 }
