@@ -417,7 +417,8 @@ img {
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .hero-grid {
-    padding: 40px 24px 56px;
+    /* was: padding: 40px 24px 56px; */
+    padding: 40px 32px 56px; /* +8px per side to keep text off the edge */
   }
   .pillars {
     font-size: 2.25rem;
@@ -438,7 +439,8 @@ img {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 22px;
-    padding: 40px 24px 56px; /* Added side padding here */
+    /* was: padding: 40px 24px 56px; */
+    padding: 40px 32px 56px; /* keep the extra breathing room on tablet */
   }
   .hero-photo {
     transform: none;
@@ -467,7 +469,8 @@ img {
   }
 
   .hero-grid {
-    padding: 40px 16px 56px;
+    /* was: padding: 40px 16px 56px; */
+    padding: 40px 20px 56px; /* small boost to avoid edge-cramping on phones */
   }
   .hero h1 {
     font-size: 2.15rem;
