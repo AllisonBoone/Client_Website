@@ -8,7 +8,7 @@
   --line: #d6ddea;
 
   /* CTA family (unified) */
-  --cta: #4b6f97; /* steel-blue */
+  --cta: #4b6f97;
   --cta-700: #3d5c7b;
   --cta-900: #314a62;
 
@@ -27,16 +27,14 @@ body {
 }
 html {
   scroll-behavior: smooth;
-} /* smooth scroll by default */
+}
 body {
   margin: 0;
   font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: var(--ink);
   background: #fff;
   line-height: 1.6;
-
-  /* Keep content below the fixed header */
-  padding-top: var(--header-h);
+  padding-top: var(--header-h); /* keeps content below fixed header */
 }
 .container {
   max-width: 1200px;
@@ -47,18 +45,14 @@ body {
 /* Offset in-page anchors so sections aren't hidden by header */
 #about,
 #services,
-#tiers,
-#contact {
+#tiers {
   scroll-margin-top: calc(var(--header-h) + 16px);
 }
 
-/* ---------- Header (always visible) ---------- */
+/* ---------- Header ---------- */
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+  inset: 0 0 auto 0;
   z-index: 1000;
   background: var(--blue-tint);
   border-bottom: 1px solid var(--line);
@@ -90,6 +84,7 @@ body {
 .brand-text {
   letter-spacing: 0.04em;
 }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -109,15 +104,6 @@ body {
   height: 28px;
   background: #c7d3e5;
   margin-inline: 6px;
-}
-.icon {
-  display: grid;
-  place-items: center;
-  border-radius: 8px;
-  background: #eef3f9;
-  border: 1px solid #e1e8f2;
-  width: 36px;
-  height: 36px;
 }
 
 /* Hamburger hidden on desktop; shows <960px */
@@ -147,7 +133,7 @@ body {
   flex-direction: column;
   gap: 16px;
   box-shadow: var(--shadow);
-  z-index: 1100; /* above fixed header */
+  z-index: 1100;
 }
 .drawer.open {
   transform: translateX(0);
@@ -171,6 +157,18 @@ body {
   gap: 12px;
 }
 
+/* LinkedIn image icon (square blue with white letters) */
+.linkedin-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.linkedin-icon-link:hover .linkedin-icon {
+  transform: translateY(-2px);
+  filter: brightness(0.9);
+}
+
 /* ---------- Hero ---------- */
 .hero {
   --hero-bg: var(--blue);
@@ -186,7 +184,7 @@ body {
   padding: 64px 0 74px;
 }
 
-/* Move photo slightly left for balanced spacing */
+/* Photo */
 .hero-photo {
   position: relative;
   display: flex;
@@ -202,7 +200,7 @@ body {
   clip-path: circle(50%);
   box-shadow: var(--shadow);
 }
-/* Blue overlay to hide the black ring baked into the image */
+/* Hide black ring baked into the image by overlaying hero background near the edge */
 .hero-photo::after {
   content: '';
   position: absolute;
@@ -216,7 +214,7 @@ body {
   );
 }
 
-/* Hero copy */
+/* Copy */
 .eyebrow {
   margin: 0;
   font-size: 1.6rem;
@@ -254,7 +252,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Unified CTAs */
+/* CTAs */
 .btn {
   appearance: none;
   border: 2px solid transparent;
@@ -282,18 +280,14 @@ body {
 .btn-cta-outline:hover {
   background: #f3f7fc;
 }
-.btn.big {
-  padding: 16px 22px;
-}
 
-/* ---------- Section polish ---------- */
+/* ---------- Sections ---------- */
 .section-pad {
   padding-block: 64px;
 }
 .section-alt {
   background: linear-gradient(180deg, #fafcff 0%, #f6f9ff 100%);
   padding-block: 64px;
-  /* soft inset fade so text never hugs the “box” edge */
   box-shadow: inset 0 24px 48px rgba(20, 30, 50, 0.06),
     inset 0 -24px 48px rgba(20, 30, 50, 0.06);
 }
@@ -352,7 +346,7 @@ body {
 /* Tiers */
 .tiers.section-alt {
   padding-block: 64px;
-} /* ensures spacing before Contact */
+}
 .tier-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -376,68 +370,6 @@ body {
 }
 .tier h4 {
   margin: 0 0 8px;
-}
-
-/* Contact */
-.contact {
-  color: #fff;
-  background: #6c8fb6;
-}
-.contact-inner {
-  position: relative;
-}
-.contact-head h2 {
-  margin: 0 0 8px;
-  font-size: 2rem;
-}
-.contact-head p {
-  margin: 0 0 26px;
-  font-weight: 700;
-}
-#contactForm {
-  max-width: 900px;
-}
-.row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-.field {
-  display: block;
-  margin: 0 0 18px;
-}
-.field span {
-  display: block;
-  font-weight: 700;
-  margin: 0 0 10px;
-}
-.field input,
-.field textarea {
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.88);
-  background: transparent;
-  color: #fff;
-  padding: 10px 4px 12px;
-  font: inherit;
-  outline: none;
-}
-.field input::placeholder,
-.field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-.field input:focus,
-.field textarea:focus {
-  border-bottom-color: #fff;
-}
-.field textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-.form-status {
-  display: inline-block;
-  margin-left: 14px;
-  font-weight: 700;
 }
 
 /* Footer */
@@ -508,13 +440,7 @@ dialog.privacy {
   border-radius: 8px;
 }
 
-/* OPTIONAL */
-button[disabled] {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-/* ---------- Responsive (scaling only) ---------- */
+/* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
   .pillars {
     font-size: 2.25rem;
@@ -549,26 +475,10 @@ button[disabled] {
 }
 
 @media (max-width: 700px) {
-  .row {
-    grid-template-columns: 1fr;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .tier-grid {
-    grid-template-columns: 1fr;
-  }
-  .vm-grid {
-    grid-template-columns: 1fr;
-  }
-
   .container {
     padding-inline: 16px;
-  }
+  } /* extra breathing room on small screens */
   .hero-grid {
     padding: 40px 16px 56px;
-  }
-  .cta-row {
-    justify-content: left;
   }
 }
