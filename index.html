@@ -317,7 +317,18 @@
             <textarea id="message" name="message" required></textarea>
           </label>
 
-          <button class="btn btn-cta big" type="submit">SUBMIT</button>
+          <!-- Honeypot (blocks basic bots; hidden from humans) -->
+          <input
+            type="text"
+            name="_gotcha"
+            tabindex="-1"
+            autocomplete="off"
+            style="display: none"
+          />
+
+          <button class="btn btn-cta big" type="submit" id="contactSubit">
+            SUBMIT
+          </button>
           <span
             class="form-status"
             id="formStatus"
