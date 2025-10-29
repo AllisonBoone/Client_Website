@@ -7,14 +7,14 @@
   --blue-tint: #d7e3f4; /* header background */
   --line: #d6ddea;
 
-  /* CTA family (unified) */
+  /* CTA family */
   --cta: #4b6f97;
   --cta-700: #3d5c7b;
   --cta-900: #314a62;
 
   --white: #fff;
   --shadow: 0 14px 32px rgba(18, 28, 48, 0.14);
-  --header-h: 80px; /* used to offset anchor scroll */
+  --header-h: 80px;
 }
 
 /* ---------- Base ---------- */
@@ -34,15 +34,21 @@ body {
   color: var(--ink);
   background: #fff;
   line-height: 1.6;
-  padding-top: var(--header-h); /* keeps content below fixed header */
+  padding-top: var(--header-h);
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
 }
 
-/* Offset in-page anchors so sections aren't hidden by header */
+/* Anchor offset */
 #about,
 #services,
 #tiers {
@@ -106,13 +112,13 @@ body {
   margin-inline: 6px;
 }
 
-/* Hamburger hidden on desktop; shows <960px */
 .hamburger {
   display: none;
   background: 0;
   border: 0;
   width: 44px;
   height: 44px;
+  cursor: pointer;
 }
 .hamburger span {
   display: block;
@@ -121,7 +127,7 @@ body {
   margin: 7px 6px;
 }
 
-/* Mobile Drawer */
+/* Drawer */
 .drawer {
   position: fixed;
   inset: 0 0 0 30%;
@@ -150,6 +156,12 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+.drawer-close:hover {
+  background: #dbe7fb; /* same hover color as privacy modal */
+  transform: translateY(-1px);
 }
 .drawer-social {
   margin-top: auto;
@@ -157,7 +169,6 @@ body {
   gap: 12px;
 }
 
-/* LinkedIn image icon (square blue with white letters) */
 .linkedin-icon {
   width: 28px;
   height: 28px;
@@ -168,7 +179,6 @@ body {
   display: inline-block;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
-
 .linkedin-icon-link {
   display: inline-flex;
   align-items: center;
@@ -176,7 +186,6 @@ body {
   width: 32px;
   height: 32px;
 }
-
 .linkedin-icon-link:hover .linkedin-icon {
   transform: translateY(-2px);
   filter: brightness(0.9);
@@ -196,8 +205,6 @@ body {
   align-items: end;
   padding: 64px 0 74px;
 }
-
-/* Photo */
 .hero-photo {
   position: relative;
   display: flex;
@@ -213,7 +220,6 @@ body {
   clip-path: circle(50%);
   box-shadow: var(--shadow);
 }
-/* Hide black ring baked into the image by overlaying hero background near the edge */
 .hero-photo::after {
   content: '';
   position: absolute;
@@ -227,7 +233,6 @@ body {
   );
 }
 
-/* Copy */
 .eyebrow {
   margin: 0;
   font-size: 1.6rem;
@@ -253,6 +258,7 @@ body {
 .br-md {
   display: none;
 }
+
 .hero h1 {
   font-size: 3rem;
   margin: 20px 0 18px;
@@ -265,7 +271,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* CTAs */
 .btn {
   appearance: none;
   border: 2px solid transparent;
@@ -321,22 +326,7 @@ body {
   background: #fff;
   box-shadow: 0 10px 24px rgba(16, 22, 36, 0.05);
 }
-.card-accent {
-  border-color: #cfe0f5;
-  box-shadow: 0 10px 28px rgba(40, 70, 110, 0.06);
-}
 
-.longcopy.section-alt {
-  padding-block: 64px;
-}
-.prose p {
-  margin: 0 0 14px;
-}
-
-/* Services */
-.services.section-pad {
-  padding-block: 64px;
-}
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -349,17 +339,7 @@ body {
   background: #fff;
   box-shadow: 0 10px 24px rgba(16, 22, 36, 0.05);
 }
-.service h3 {
-  margin: 0 0 10px;
-}
-.service ul {
-  margin: 0 0 0 18px;
-}
 
-/* Tiers */
-.tiers.section-alt {
-  padding-block: 64px;
-}
 .tier-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -372,20 +352,28 @@ body {
   background: #fff;
   box-shadow: 0 10px 24px rgba(16, 22, 36, 0.05);
 }
-.tag {
-  display: inline-block;
-  font-size: 0.85rem;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: #eaf1fb;
-  border: 1px solid #dbe7fb;
-  margin-bottom: 8px;
+
+/* === PRIVACY POLICY X POSITION === */
+.dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  background: #eef3f9;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 0;
+  background: #eef3f9; /* same hover color as privacy modal */
+  transform: translateY(-1px);
 }
-.tier h4 {
-  margin: 0 0 8px;
+.dialog-close:hover {
+  background: #eef3f9;
+  background: #dbe7fb; /* same hover color as privacy modal */
+  transform: translateY(-1px);
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 .footer {
   background: #f3f6fb;
   padding: 24px 0;
@@ -393,10 +381,10 @@ body {
 }
 .footer-grid {
   display: flex;
-  align-items: center;
+  align-items: center; /* keep everything level */
   justify-content: space-between;
-  gap: 18px;
   flex-wrap: wrap;
+  gap: 18px;
 }
 .footer-brand {
   display: flex;
@@ -412,49 +400,25 @@ body {
   font-weight: 700;
   letter-spacing: 0.04em;
 }
+
 .footer-right {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.footer-right a {
-  color: #3b5b8a;
-  text-decoration: underline;
+  align-items: center; /* keep text and icon level */
+  gap: 12px; /* space between Privacy and LinkedIn */
 }
 
-/* Privacy dialog */
-dialog.privacy {
-  max-width: min(800px, 92vw);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 0;
-  box-shadow: var(--shadow);
-}
-.privacy::backdrop {
-  background: rgba(10, 16, 26, 0.45);
-  backdrop-filter: blur(2px);
-}
-.privacy-head {
-  display: flex;
+#openPrivacy {
+  display: inline-flex; /* consistent vertical alignment */
   align-items: center;
-  justify-content: space-between;
-  padding: 16px 18px;
-  border-bottom: 1px solid var(--line);
-}
-.privacy-body {
-  padding: 18px;
-  line-height: 1.6;
-}
-.dialog-close {
-  border: 0;
-  background: #eef3f9;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  line-height: 1; /* avoid extra vertical wobble */
+  text-decoration: underline; /* optional: keep it obviously a link */
 }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
+  .hero-grid {
+    padding: 40px 24px 56px;
+  }
   .pillars {
     font-size: 2.25rem;
   }
@@ -474,7 +438,7 @@ dialog.privacy {
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 22px;
-    padding: 40px 0 56px;
+    padding: 40px 24px 56px; /* Added side padding here */
   }
   .hero-photo {
     transform: none;
@@ -487,11 +451,45 @@ dialog.privacy {
   }
 }
 
+@media (max-width: 860px) {
+  .vm-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .tier-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     padding-inline: 16px;
-  } /* extra breathing room on small screens */
+  }
+
   .hero-grid {
     padding: 40px 16px 56px;
+  }
+  .hero h1 {
+    font-size: 2.15rem;
+    line-height: 1.18;
+  }
+  .pillars {
+    font-size: 1.75rem;
+  }
+  .cta-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .vm-grid,
+  .services-grid,
+  .tier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .service,
+  .tier {
+    padding: 16px;
   }
 }
